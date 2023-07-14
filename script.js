@@ -23,18 +23,18 @@ let month = today.getMonth();
 let year = today.getFullYear();
 
 const months = [
-  "January",
-  "February",
-  "March",
-  "April",
-  "May",
-  "June",
-  "July",
-  "August",
-  "September",
-  "October",
-  "November",
-  "December",
+  "Janeiro",
+  "Fevereiro",
+  "Março",
+  "Abril",
+  "Maio",
+  "Junho",
+  "Julho",
+  "Agosto",
+  "Setembro",
+  "Outubro",
+  "Novembro",
+  "Dezembro",
 ];
 
 // const eventsArr = [
@@ -226,16 +226,19 @@ function gotoDate() {
       return;
     }
   }
-  alert("Invalid Date");
+  alert("Data Inválida");
 }
 
 //function get active day day name and date and update eventday eventdate
 function getActiveDay(date) {
   const day = new Date(year, month, date);
+  // console.log(day);
   const dayName = day.toString().split(" ")[0];
   eventDay.innerHTML = dayName;
   eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
+
+
 
 //function update events when a day is active
 function updateEvents(date) {
