@@ -39,9 +39,9 @@ const months = [
 
 // const eventsArr = [
 //   {
-//     day: 13,
-//     month: 11,
-//     year: 2022,
+//     day: 17,
+//     month: 7,
+//     year: 2023,
 //     events: [
 //       {
 //         title: "Event 1 lorem ipsun dolar sit genfa tersd dsad ",
@@ -232,8 +232,15 @@ function gotoDate() {
 //function get active day day name and date and update eventday eventdate
 function getActiveDay(date) {
   const day = new Date(year, month, date);
-  // console.log(day);
-  const dayName = day.toString().split(" ")[0];
+  console.log(day);
+  let dayName = day.toString().split(" ")[0];
+  if (dayName === 'Sun') { dayName = 'Dom'};
+  if (dayName === 'Mon') { dayName = 'Seg'};
+  if (dayName === 'Tue') { dayName = 'Ter'};
+  if (dayName === 'Wed') { dayName = 'Qua'};
+  if (dayName === 'Thu') { dayName = 'Qui'};
+  if (dayName === 'Fri') { dayName = 'Sex'};
+  if (dayName === 'Sat') { dayName = 'Sáb'};
   eventDay.innerHTML = dayName;
   eventDate.innerHTML = date + " " + months[month] + " " + year;
 }
