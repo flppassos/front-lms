@@ -37,25 +37,25 @@ const months = [
   "Dezembro",
 ];
 
-// const eventsArr = [
-//   {
-//     day: 17,
-//     month: 7,
-//     year: 2023,
-//     events: [
-//       {
-//         title: "Event 1 lorem ipsun dolar sit genfa tersd dsad ",
-//         time: "10:00 AM",
-//       },
-//       {
-//         title: "Event 2",
-//         time: "11:00 AM",
-//       },
-//     ],
-//   },
-// ];
+const eventsArr = [
+  {
+    day: 19,
+    month: 7,
+    year: 2023,
+    events: [
+      {
+        title: "Event 1 lorem ipsun dolar sit genfa tersd dsad ",
+        time: "10:00 AM",
+      },
+      {
+        title: "Event 2",
+        time: "11:00 AM",
+      },
+    ],
+  },
+];
 
-const eventsArr = [];
+// const eventsArr = [];
 getEvents();
 console.log(eventsArr);
 
@@ -256,15 +256,27 @@ function updateEvents(date) {
       month + 1 === event.month &&
       year === event.year
     ) {
+      // event.events.forEach((event) => {
+      //   events += `<div class="event">
+      //       <div class="title">
+      //         <i class="fas fa-circle"></i>
+      //         <h3 class="event-title">${event.title}</h3>
+      //       </div>
+      //       <div class="event-time">
+      //         <span class="event-time">${event.time}</span>
+      //       </div>
+      //   </div>`;
+      // });
       event.events.forEach((event) => {
         events += `<div class="event">
-            <div class="title">
-              <i class="fas fa-circle"></i>
-              <h3 class="event-title">${event.title}</h3>
-            </div>
-            <div class="event-time">
-              <span class="event-time">${event.time}</span>
-            </div>
+        <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
+        <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+          <tr class="hover:bg-gray-50">
+            <td class="px-6 py-4">${event.title}</td>
+            <td class="px-6 py-4">${event.time}</td>
+          </tr>
+        </tbody>
+      </table>
         </div>`;
       });
     }
