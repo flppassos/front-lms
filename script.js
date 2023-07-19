@@ -270,10 +270,10 @@ function updateEvents(date) {
       event.events.forEach((event) => {
         events += `<div class="event">
         <table class="w-full border-collapse bg-white text-left text-sm text-gray-500">
-        <tbody class="divide-y divide-gray-100 border-t border-gray-100">
+        <tbody class="divide-y divide-gray-100 border-t border-gray-200">
           <tr class="hover:bg-gray-50">
-            <td class="px-6 py-4">${event.title}</td>
-            <td class="px-6 py-4">${event.time}</td>
+            <td class="px-1 py-4">${event.title}</td>
+            <td class="px-4 py-4 text-right font-semibold">${event.time}</td>
           </tr>
         </tbody>
       </table>
