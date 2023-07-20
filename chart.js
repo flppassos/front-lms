@@ -12,10 +12,10 @@ let chartTreinamentos = new Chart(ctx, {
       }]
     },
     options: {
-      scales: {
-        // y: {
-        //   beginAtZero: true
-        // }
+      plugins: {
+        legend: {
+          position: 'top'
+        }
       }
     }
 });
@@ -23,13 +23,28 @@ let chartTreinamentos = new Chart(ctx, {
 let chartHoras = new Chart(ctx2, {
     type: 'line',
     data: {
-        labels: ["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"],
+        labels: ["Jan","Fev","Mar","Abr","Mai","Jun","Jul",],
         datasets: [{
-          label: 'Horas de Treinamentos',
-          data: [65,59,80,13,24,250,48,64,0,0,0,0,],
+          label: 'Horas em Treinamentos',
+          data: [4,8,3,2,6,10,2,],
           fill: false,
-          borderColor: 'rgb(75, 192, 192)',
+          borderColor: '#fdba74',
           tension: 0.1
         }]
     },
+    options: {
+      scales: {
+        y: {
+          beginAtZero: true
+        }
+      },
+      plugins: {
+        legend: {
+          position: 'top'
+        }
+      }
+    }
 });
+
+// "Agosto","Setembro","Outubro","Novembro","Dezembro"
+// 64,0,0,0,0,
