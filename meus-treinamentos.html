@@ -18,7 +18,7 @@
   </head>
   <body>
     <!-- {{-- Full page --}} -->
-    <div class="h-screen antialiased text-gray-900 bg-stone-100 flex">
+    <div class="h-screen antialiased text-gray-900 bg-zinc-50 flex"> <!--bg-stone-100 -->
       <!-- {{-- Menu lateral --}} -->
       <aside
         class="flex-shrink-0 px-3 py-4 w-[70px] md:w-[256px] bg-orange-500 flex flex-col transition-all duration-[0.55] shadow-md"
@@ -151,19 +151,85 @@
           </div>
         </header>
         <!-- Área principal -->
-        <main class="flex-grow px-6 py-8">
-            <div class="text-xl mb-4">
+        <main class="flex-grow px-8 py-8">
+            <div class="text-xl mb-6">
                 <span>Meus Treinamentos</span>
             </div>
 
-            <section class="grid grid-cols-3 gap-4">
-                <section class="grid gap-4 h-96">
-                    <div class="bg-white rounded-md shadow-md p-4">Caixa de Pesquisa</div>
+            <div class="flex gap-8">
+                <section class="flex flex-col w-80 gap-5">
+                    <div class="bg-white rounded-md shadow p-4">
+                      <input type="text" placeholder="Search" class="w-full border border-gray-200 rounded p-2">
+                    </div>
+                    <div class="flex flex-col gap-2 bg-white rounded-md shadow p-4">
+                      <span class="text-lg">Categorias de Treinamento</span>
+                      <div class="w-full">
+                        <div class="flex items-center p-2 gap-2">
+                          <input type="checkbox" id="categoria1" value="" class="">
+                          <label for="categoria1" class="w-full select-none">Categoria 1</label>
+                        </div>
+                        <div class="flex items-center p-2 gap-2">
+                          <input type="checkbox" id="categoria2" class="">
+                          <label for="categoria2" class="w-full select-none">Categoria 2</label>
+                        </div>
+                        <div class="flex items-center p-2 gap-2">
+                          <input type="checkbox" id="categoria3" class="">
+                          <label for="categoria3" class="w-full select-none">Categoria 3</label>
+                        </div>
+                        <div class="flex items-center p-2 gap-2">
+                          <input type="checkbox" id="categoria4" class="">
+                          <label for="categoria4" class="w-full select-none">Categoria 4</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex flex-col gap-2 bg-white rounded-md shadow p-4">
+                      <span class="text-lg">Tags</span>
+                      <div class="w-full">
+                        <div class="flex items-center p-2 gap-2">
+                          <input type="checkbox" id="tag1" value="" class="">
+                          <label for="tag1" class="w-full select-none">Tag 1</label>
+                        </div>
+                        <div class="flex items-center p-2 gap-2">
+                          <input type="checkbox" id="tag2" class="">
+                          <label for="tag2" class="w-full select-none">Tag 2</label>
+                        </div>
+                        <div class="flex items-center p-2 gap-2">
+                          <input type="checkbox" id="tag3" class="">
+                          <label for="tag3" class="w-full select-none">Tag 3</label>
+                        </div>
+                        <div class="flex items-center p-2 gap-2">
+                          <input type="checkbox" id="tag4" class="">
+                          <label for="tag4" class="w-full select-none">Tag 4</label>
+                        </div>
+                      </div>
+                    </div>
                 </section>
-                <section class="grid gap-4 col-span-2">
-                    <div class="bg-white rounded-md shadow-md p-4">Conteúdo</div>
+                <section class="flex-grow">
+                    <div class="flex bg-white rounded-md shadow-md p-4">
+                      <div class="">
+                        <img src="https://images.unsplash.com/photo-1559136656-3db4bf6c35f8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1169&q=80" alt="" class="w-[250px]">
+                      </div>
+                      <div class="flex-grow flex-col p-2 border border-blue-500">
+                        <div class="w-full flex justify-between">
+                          <span class="border border-red-500">Política Integrada</span>
+                          <div class="border border-red-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                              <path stroke-linecap="round" stroke-linejoin="round" d="M17.593 3.322c1.1.128 1.907 1.077 1.907 2.185V21L12 17.25 4.5 21V5.507c0-1.108.806-2.057 1.907-2.185a48.507 48.507 0 0111.186 0z" />
+                            </svg>
+                            
+                          </div>
+                        </div>
+                        <div class="mb-2">
+                          <span class="text-sm">Categoria</span>
+                        </div>
+                        <div>
+                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit illum quasi sed.</p>
+                        </div>
+
+                      </div>
+                    </div>
                 </section>
-            </section>
+            </div>
         </main>
       </div>
     </div>
